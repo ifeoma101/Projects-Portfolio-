@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  padding: 10px;
+  padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
 
@@ -23,29 +23,33 @@ body {
 }
 
 nav{
-
+display: flex;
 background: cadetblue;
  display:flex;
  justify-content:space-between;
  align-items: center;
  position:sticky;
  top: 0;
-
+ 
 
 }
 
-nav ul {
+/*not needed in code
+/* nav ul {
   display: flex;
   align-items: center;
+  position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100px; */
 
-}
+/* } */
 
 nav ul li {
   list-style: none;
 } 
 
 nav a {
-  display: block;
   text-decoration: none;
   color: white;
   padding: 0.5rem;
@@ -63,14 +67,15 @@ img {
   max-height: 100%;
   width: 600px;
   height:600px;
-  border: 1px solid #ddd;
+  border: 5px solid #ddd;
   border-radius: 4px;
-  padding: 5px;
-  
+  border-style:  solid;
+  border-color: cadetblue;
+  z-index: 1;
 }
 
 .img-1 {
-  width: 190px;
+  width: 180px;
   height: 120px;  
 }
   
@@ -101,6 +106,7 @@ p {
 .contents {
   background: cadetblue;
  justify-content:space-between;
+ justify-content: flex-end;
  align-items: center;
  position:sticky;
  top: 0;
@@ -140,6 +146,7 @@ p {
   height: 100%;
   margin-top: 50px;
   width: 100%;
+  /* overflow:auto; */
 }
 
 
@@ -210,6 +217,8 @@ p {
   align-items: center;
   gap: 1em;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .portfolio {
@@ -219,10 +228,38 @@ p {
   align-items: center;
   flex-wrap: wrap;
   gap: 1em;
+  position: relative;
+  z-index: 1;
 } 
 
 
 li {
   display: inline-block;
   margin: 0 10px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; 
+  left: 26.5%; 
+  transform: translate(-50%, -50%);  
+  background-color: cadetblue; 
+  color: #fff; 
+  padding: 10px 20px; 
+  font-size: 20px; 
+  text-align: center;
+  z-index: 1;
+}
+
+.overlay-text1 {
+  position: absolute;
+  top: 50%; 
+  left: 35%; 
+  transform: translate(-50%, -50%);  
+  background-color: cadetblue; 
+  color: #fff; 
+  padding: 3px 8px; 
+  font-size: 20px; 
+  text-align: center;
+  z-index: 1;
 }
